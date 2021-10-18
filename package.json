@@ -1,14 +1,14 @@
 {
-  "name": "eleventy-basic",
+  "name": "eleventy-basic-example",
   "version": "1.0.0",
-  "description": "Your Site Description Goes Here",
+  "description": "Demo of using eleventy basic starter",
   "main": "index.html",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
   "keywords": [],
-  "author": "Your Name",
+  "author": "Chris Stein",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
