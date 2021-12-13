@@ -1,5 +1,5 @@
 ---
-siteName: YourSiteName
+siteName: Chris Stein Portfolio
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,22 +9,37 @@ siteName: YourSiteName
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{siteName}} | {{ title }}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  {% if cssfile %}
+    <link rel="stylesheet" href="/css/{{ cssfile }}">
+  {% endif %}
 </head>
-<body>
+<body class="{{ pageClass }}">
   <header class="site-header">
         <!-- add site wide header content here -->
+        <div class="logo">logo</div>
+
         {% include "nav.njk" %}
-    </header>
+    </header> 
 
+  <main id="main">
   {{ content | safe }}
+  </main>
 
-  <footer>
-    <div>
-      <p>&copy; {{ pkg.author }}</p>
-      <!-- You can change all of this footer content. -->
-    </div>
-  </footer>
+    <footer class="site-footer">
+        <!-- add site-wide footer content here -->
+        <div class="copyright">
+          <p>&copy; {{ pkg.author }}</p>
+        </div>
+        <div class="social">
+            <p><a class="me" href="#">Contact</a></p>
+            <p><a class="me" href="#">Behance</a></p>
+            <p><a class="me" href="#">Linked In</a></p>
+            <p><a href="#">YouTube</a></p>
+        </div>
+    </footer>
 
-  <script src="/js/main.js"></script>
 </body>
+
 </html>
