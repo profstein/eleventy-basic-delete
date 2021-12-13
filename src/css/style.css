@@ -1,0 +1,15 @@
+body{
+    background-color: yellow;
+}
+
+body.work{
+    color: blue;
+}
+
+body.sample{
+    color: purple;
+}
+
+body.sample .mygridthing{
+    
+}
